@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Stroke Prediction AI</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:,">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🧠 Stroke Prediction AI Dashboard</h1>
+
+<div class="card">
+
+<form id="strokeForm">
+
+<div class="form-grid">
+
+<div>
+<label>Age</label>
+<input type="number" id="age" required>
+</div>
+
+<div>
+<label>Glucose Level</label>
+<input type="number" id="glucose" required>
+</div>
+
+<div>
+<label>BMI</label>
+<input type="number" id="bmi" required>
+</div>
+
+<div>
+<label>Hypertension</label>
+<select id="hypertension">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+<div>
+<label>Heart Disease</label>
+<select id="heart_disease">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+
+</div>
+
+<button type="submit">Predict Stroke Risk</button>
+
+</form>
+
+</div>
+
+<div class="card result-card">
+
+<h2 id="result">Prediction Result</h2>
+
+<h3>Stroke Risk Gauge</h3>
+
+<meter id="riskGauge" min="0" max="100" value="0"></meter>
+
+</div>
+
+<div class="card">
+
+<h2>Local Explanation (Patient Level)</h2>
+<img id="shapPlot">
+
+</div>
+
+<div class="card">
+
+<h2>Interactive SHAP Force Plot</h2>
+
+<iframe
+id="forceFrame"
+width="100%"
+height="300"
+style="border:none;">
+</iframe>
+
+</div>
+
+<div class="card">
+
+<h2>Global Stroke Risk Factors</h2>
+<img id="summaryPlot">
+
+</div>
+
+<div class="card">
+
+<h2>Feature Importance</h2>
+<img id="importancePlot">
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
