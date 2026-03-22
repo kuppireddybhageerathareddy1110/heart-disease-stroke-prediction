@@ -1,6 +1,9 @@
 {
-    "files.associations": {
-        "*.dbclient-js": "javascript",
-        "plyconfig.json": "jsonc"
-    }
+  "files.associations": {
+    "*.dbclient-js": "javascript",
+    "plyconfig.json": "jsonc"
+  },
+  "mcp": {
+    "configFile": "./mcp.json"
+  }
 }
